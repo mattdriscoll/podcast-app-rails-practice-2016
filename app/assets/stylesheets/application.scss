@@ -105,8 +105,8 @@ body {
   }
 }
 
-.podcasts_banner {
-  background-image: url(../images/podcasts_banner.jpg);
+.podcasts_banner, .sign_up_banner, .sign_up_banner {
+  background-image: image-url("podcasts_banner.jpg");
 }
 
 .pagination:before, .pagination:after {

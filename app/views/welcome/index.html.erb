@@ -1,22 +1,4 @@
 <div id="background">
-  <header class="cf">
-    <div class="wrapper_wide">
-      <a href="#" id="logo">PodcastApp</a>
-      <nav>
-        <ul>
-          <% unless podcast_signed_in? %>
-            <li><a href="#">Explore</a></li>
-            <li><%= link_to "Sign In", new_podcast_session_path %></li>
-            <li><%= link_to "Create A Podcast", new_podcast_registration_path %></li>
-          <% else %>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><%= link_to "Sign Out", destroy_podcast_session_path, method: :delete %></li>
-          <% end %>
-        </ul>
-      </nav>
-    </div>
-  </header>
   <div class="wrapper_skinny home_banner">
     <h1>Discover your new favorite <br>podcast, or create your own.</h1>
     <%= link_to "Create A Podcast", new_podcast_registration_path, class: "button button_highlight" %>
