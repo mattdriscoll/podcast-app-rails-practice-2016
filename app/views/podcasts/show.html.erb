@@ -1,0 +1,74 @@
+<div id="podcast_show">
+  <div class="show_banner">
+    <div class="wrapper_skinny">
+      <h1 class="podcast_title"><%= @podcast.title %></h1>
+      <p class="description"><%= @podcast.description %></p>
+      <% unless @podcast.itunes.blank? %>
+        <a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+      <% end %>
+      <% unless @podcast.stitcher.blank? %>
+        <a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
+      <% end %>
+      <% unless @podcast.podbay.blank? %>
+        <a href="<%= @podcast.podbay %>" class="subscribe_link">Podbay</a>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    <%= link_to podcasts_path do %>
+      All Podcasts
+    <% end %>
+    <span>/</span>
+    <a href="#"><%= @podcast.title %></a>
+  </div>
+
+
+  <div class="episodes">
+    <div class="wrapper_skinny">
+      <ul class="cf">
+        <li class="cf">
+          <div class="episode_thumbnail">
+            <a href="episode.html">
+              <img src="images/tl_lax.jpg" alt="Jon Lax" />
+            </a>
+          </div>
+          <div class="episode_overview">
+            <a href="episode.html"><h2 class="episode_title">Jon Lax – Growing up &amp; Design Philosophy</h2></a>
+            <p class="description">We sit at the table with Jon Lax and talk about his childhood and how that informed his design philosophy.</p>
+          </div>
+        </li>
+        <li class="cf">
+          <div class="episode_thumbnail">
+            <a href="episode.html">
+              <img src="images/tl_storytelling.jpg" alt="Storytelling" />
+            </a>
+          </div>
+          <div class="episode_overview">
+            <a href="episode.html"><h2 class="episode_title">Storytelling for Designers</h2></a>
+            <p class="description">In this episode, hosted by Los, the duo discuss storytelling and the place it holds in design and other industries.</p>
+          </div>
+        </li>
+        <li class="cf">
+          <div class="episode_thumbnail">
+            <a href="episode.html">
+              <img src="images/tl_important.jpg" alt="Important" />
+            </a>
+          </div>
+          <div class="episode_overview">
+            <a href="episode.html"><h2 class="episode_title">What is important to you?</h2></a>
+            <p class="description">In this episode, Los had planned to talk about one thing and we end up talking about how does one find importance?</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="pagination">
+  <span class="previous_page disabled">Previous</span>
+  <em class="current">1</em>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#" class="next_page">Next</a>
+</div>
